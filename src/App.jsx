@@ -4,31 +4,38 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-
       <h1>Hello, this is vite + react project</h1>
-      <Person/>
-      <Person/>
-      <Person/>
-      <Person/>
-      <Person/>
+      <Device name="laptop" price="35000"></Device>
+      <Device name="mobile" price="25000"></Device>
+      <Device name="watch" price="3000"></Device>
+      <Device name="watch-02" price="3000"/>
       <Person/>
       <Address/>
-
     </>
+  )
+}
+
+function Device(props){
+console.log(props);
+  return (
+      <h2>This device: {props.name}, price: {props.price} </h2>
   )
 }
 
 function Person() {
   const age = 26;
   const name = 'Rasel'
-
+  const Style = {
+    color: "white",
+    fontSize: "20px",
+    backgroundColor: "blueviolet",
+    padding: "10px",
+  }
   return (
     <>
-      <p>My Name is: {name} and my age is: {age} </p>
+      <p style={Style}>My Name is: {name} and my age is: {age} </p>
     </>
   )
 
@@ -42,7 +49,7 @@ floor: 6th,
 `
   return (
     <>
-    <h2>
+    <h2 className='name'>
       Address is: {add}
     </h2>
     </>
