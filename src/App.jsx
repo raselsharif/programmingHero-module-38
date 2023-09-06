@@ -1,12 +1,17 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import Todo from './Todo'
 import './App.css'
 
 function App() {
   return (
     <>
-      <h1>Hello, this is vite + react project</h1>
+    <Todo task="learn react" completed={false}></Todo>
+    <Todo task="learn JS" completed={true}></Todo>
+    <Todo task="learn CSS" completed={true}></Todo>
+    
+      {/* <h1>Hello, this is vite + react project</h1>
       <Device name="laptop" price="35000"></Device>
       <Device name="mobile" price="25000"></Device>
       <Device name="watch" price="3000"></Device>
@@ -16,7 +21,7 @@ function App() {
       <Students myClass="12" grade="100"></Students>
       <Students myClass="12" grade="95"></Students>
       <Person />
-      <Address />
+      <Address /> */}
     </>
   )
 }
