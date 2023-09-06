@@ -10,17 +10,28 @@ function App() {
       <Device name="laptop" price="35000"></Device>
       <Device name="mobile" price="25000"></Device>
       <Device name="watch" price="3000"></Device>
-      <Device name="watch-02" price="3000"/>
-      <Person/>
-      <Address/>
+      <Device name="watch-02" price="3000" />
+      <Students myClass="12" grade="85"></Students>
+      <Students myClass="12" grade="90"></Students>
+      <Students myClass="12" grade="100"></Students>
+      <Students myClass="12" grade="95"></Students>
+      <Person />
+      <Address />
     </>
   )
 }
 
-function Device(props){
-console.log(props);
+function Students({ myClass, grade }) {
+  // console.log(myClass);
   return (
-      <h2>This device: {props.name}, price: {props.price} </h2>
+    <h3>Class: {myClass} , Grade: {grade} </h3>
+  )
+}
+
+function Device(props) {
+  // console.log(props);
+  return (
+    <h2>This device: {props.name}, price: {props.price} </h2>
   )
 }
 
@@ -41,17 +52,17 @@ function Person() {
 
 }
 
-function Address(){
-const add = `
+function Address() {
+  const add = `
 House No: 325,
 Road No: 20/A,
 floor: 6th,
 `
   return (
     <>
-    <h2 className='name'>
-      Address is: {add}
-    </h2>
+      <h2 className='name'>
+        Address is: {add}
+      </h2>
     </>
   )
 }
