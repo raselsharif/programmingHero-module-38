@@ -2,15 +2,54 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import Todo from './Todo'
+import Actors from './Actors'
+import Singers from './Singers'
 import './App.css'
 
 function App() {
+  const actors = [
+    'Tom Hanks',
+    'Meryl Streep',
+    'Denzel Washington',
+    'Scarlett Johansson',
+    'Leonardo DiCaprio',
+    'Jennifer Lawrence',
+    'Brad Pitt',
+    'Natalie Portman',
+    'Robert De Niro',
+    'Charlize Theron'
+  ];
+  const singers = [
+    { id: 1, name: 'John', age: 30 },
+    { id: 2, name: 'Alice', age: 25 },
+    { id: 3, name: 'Bob', age: 35 },
+    { id: 4, name: 'Eve', age: 28 },
+    { id: 5, name: 'Charlie', age: 40 },
+    { id: 6, name: 'Olivia', age: 22 },
+    { id: 7, name: 'Daniel', age: 33 },
+    { id: 8, name: 'Sophia', age: 29 },
+    { id: 9, name: 'Grace', age: 37 },
+    { id: 10, name: 'Liam', age: 32 }
+  ];
+
+
+
   return (
     <>
-    <Todo task="learn react" completed={false}></Todo>
+
+      {
+        singers.map(singer => <Singers singer={singer}></Singers>)
+      }
+
+      {/* {
+        actors.map(actor => <Actors name={actor}></Actors>)
+      } */}
+
+
+      {/* <Todo task="learn react" completed={false}></Todo>
     <Todo task="learn JS" completed={true}></Todo>
-    <Todo task="learn CSS" completed={true}></Todo>
-    
+    <Todo task="learn CSS" completed={true}></Todo> */}
+
       {/* <h1>Hello, this is vite + react project</h1>
       <Device name="laptop" price="35000"></Device>
       <Device name="mobile" price="25000"></Device>
