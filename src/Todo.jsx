@@ -21,14 +21,32 @@
 // }
 
 
-export default function Todo({ task, completed }) {
-    if (completed) {
-        return (
-            <h4>Completed: {task}</h4>
-        )
-    }
-    return (
-        <h4>Running: {task}</h4>
-    )
+// export default function Todo({ task, completed }) {
+//     if (completed) {
+//         return (
+//             <h4>Completed: {task}</h4>
+//         )
+//     }
+//     return (
+//         <h4>Running: {task}</h4>
+//     )
 
+// }
+
+// export default function Todo({ task, completed }) {
+//     return (
+//         <h4>{task} -- {completed ? "🆗" : "🚫"}</h4>
+//     )
+// }
+
+// export default function Todo({ task, completed }) {
+//     return (
+//         <h4>{task} -- {completed &&  "🆗"}</h4>
+//     )
+// }
+
+export default function Todo({ task, completed }) {
+    return (
+        <h4>{task} -- {completed ||  "🚫"}</h4>
+    )
 }
