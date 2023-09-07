@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import Todo from './Todo'
 import Actors from './Actors'
 import Singers from './Singers'
+import BookStore from './BookStore'
 import './App.css'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
     'Robert De Niro',
     'Charlize Theron'
   ];
+
   const singers = [
     { id: 1, name: 'John', age: 30 },
     { id: 2, name: 'Alice', age: 25 },
@@ -32,10 +34,31 @@ function App() {
     { id: 10, name: 'Liam', age: 32 }
   ];
 
+  const books = [
+    { id: 0, bookName: "The Great Gatsby", bookPrice: 12.99 },
+    { id: 1, bookName: "To Kill a Mockingbird", bookPrice: 10.99 },
+    { id: 2, bookName: "1984", bookPrice: 9.99 },
+    { id: 3, bookName: "The Catcher in the Rye", bookPrice: 11.99 },
+    { id: 4, bookName: "Pride and Prejudice", bookPrice: 8.99 },
+    { id: 5, bookName: "The Hobbit", bookPrice: 14.99 },
+    { id: 6, bookName: "Fahrenheit 451", bookPrice: 13.99 },
+    { id: 7, bookName: "The Lord of the Rings", bookPrice: 15.99 },
+    { id: 8, bookName: "Brave New World", bookPrice: 10.49 },
+    { id: 9, bookName: "The Alchemist", bookPrice: 11.49 },
+    { id: 10, bookName: "The Alchemist", bookPrice: 11.49 },
+    { id: 11, bookName: "The Alchemist", bookPrice: 11.49 },
+    { id: 12, bookName: "The Alchemist", bookPrice: 11.49 },
+    { id: 13, bookName: "The Alchemist", bookPrice: 11.49 },
+    { id: 14, bookName: "The Alchemist", bookPrice: 11.49 },
+    { id: 15, bookName: "The Alchemist", bookPrice: 11.49 },
+  ];
 
 
   return (
     <>
+
+
+      <BookStore books={books}></BookStore>
 
       {
         singers.map(singer => <Singers singer={singer}></Singers>)
